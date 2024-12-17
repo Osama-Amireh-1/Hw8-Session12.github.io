@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+function GetRadomInt(min ,max)
+{
+     var rand= Math.floor(Math.random()*(max-min+1)+min);
+     var usergess=document.getElementById('in1').value;
+      if(rand==usergess)
+      {
+        document.getElementById('p1').innerHTML="Good Work!"
+      }
+      else
+      {
+        document.getElementById('p1').innerHTML="Not matched"
+
+      }
+
+}
+
+
+
+
+    </script>
+</head>
+<body>
+    <h3>Guess a number between 1 and 10:</h3>
+    <input type="text" id="in1"> <button onclick="GetRadomInt(1,10)">Submit</button>
+    <p id="p1"> </p>
+</body>
+</html>
